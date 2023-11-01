@@ -21,7 +21,7 @@ class userController {
                             tc: tc
                         })
                         await doc.save()
-                        res.send({"status":"Success" ,"message":"Registration Success"})
+                        res.status(201).send({"status":"Success" ,"message":"Registration Success"})
                     } catch (error) {
                         console.log(error);
                         res.send({ "status": "failed", "message": "Unable to Register" })
